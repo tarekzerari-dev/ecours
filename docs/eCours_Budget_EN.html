@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eCours Project Budget</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            padding: 40px;
+            color: #0f172a;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #059669; /* Emerald 600 */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th {
+            background-color: #059669; /* Emerald 600 */
+            color: white;
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: left;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:hover {
+            background-color: #ecfdf5; /* Emerald 50 */
+        }
+        .category {
+            background-color: #d1fae5; /* Emerald 100 */
+            color: #047857; /* Emerald 700 */
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        .total-row td {
+            background-color: #1e293b; /* Slate 800 */
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .price {
+            font-weight: bold;
+            color: #0f172a;
+        }
+        .instruction {
+            text-align: center;
+            color: #64748b;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>💰 eCours Project Budget (ProtoMarket)</h1>
+        <p>Color-coded and Organized Version (TRL 4)</p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>N°</th>
+                <th>Famille</th>
+                <th>Désignation précise</th>
+                <th>Justification technique</th>
+                <th>Qté</th>
+                <th>P.U. DA</th>
+                <th>Total DA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="category">3.09</span></td>
+                <td>Cloud & Digital Services</td>
+                <td>VPS & Cloud Database (Supabase Pro)</td>
+                <td>Platform hosting and real-time attendance sync (TRL 4).</td>
+                <td>1</td>
+                <td>150,000</td>
+                <td class="price">150,000</td>
+            </tr>
+            <tr>
+                <td><span class="category">3.09</span></td>
+                <td>Cloud & Digital Services</td>
+                <td>SMS Gateway (100k SMS)</td>
+                <td>Testing instant parent notifications upon entry.</td>
+                <td>1</td>
+                <td>100,000</td>
+                <td class="price">100,000</td>
+            </tr>
+            <tr>
+                <td><span class="category">3.09</span></td>
+                <td>Cloud & Digital Services</td>
+                <td>Domain Name & SSL Certificate</td>
+                <td>Official domain and secure encryption.</td>
+                <td>1</td>
+                <td>15,000</td>
+                <td class="price">15,000</td>
+            </tr>
+            <tr>
+                <td><span class="category">3.04</span></td>
+                <td>Prototype Equipment</td>
+                <td>Tablets (Kiosk Mode)</td>
+                <td>Exclusive QR scanning gates at entrances (Not personal).</td>
+                <td>3</td>
+                <td>80,000</td>
+                <td class="price">240,000</td>
+            </tr>
+            <tr>
+                <td><span class="category">3.04</span></td>
+                <td>Prototype Equipment</td>
+                <td>Tablet Wall Mounts</td>
+                <td>Securing tablets at entrances (Realistic simulation).</td>
+                <td>3</td>
+                <td>15,000</td>
+                <td class="price">45,000</td>
+            </tr>
+            <tr>
+                <td><span class="category">3.04</span></td>
+                <td>Prototype Equipment</td>
+                <td>PVC Thermal Printers</td>
+                <td>Distributed to multiple test centers to evaluate workload.</td>
+                <td>5</td>
+                <td>50,000</td>
+                <td class="price">250,000</td>
+            </tr>
+            <tr>
+                <td><span class="category">3.04</span></td>
+                <td>Prototype Equipment</td>
+                <td>Blank PVC Cards (1000 pcs)</td>
+                <td>Raw material to test automated barcode reading.</td>
+                <td>1</td>
+                <td>35,000</td>
+                <td class="price">35,000</td>
+            </tr>
+            <tr>
+                <td><span class="category">3.05</span></td>
+                <td>Software Development</td>
+                <td>Mobile Dev Licenses (Apple & Google)</td>
+                <td>Publishing the app for internal testers.</td>
+                <td>1</td>
+                <td>30,000</td>
+                <td class="price">30,000</td>
+            </tr>
+            <tr>
+                <td><span class="category">3.05</span></td>
+                <td>Software Development</td>
+                <td>Premium UI/UX Library License</td>
+                <td>Ready-made components to accelerate UI development.</td>
+                <td>1</td>
+                <td>45,000</td>
+                <td class="price">45,000</td>
+            </tr>
+            <tr>
+                <td><span class="category">3.05</span></td>
+                <td>Software Development</td>
+                <td>AI Coding Agents Subscriptions</td>
+                <td>Essential to accelerate complex coding and debugging.</td>
+                <td>1</td>
+                <td>40,000</td>
+                <td class="price">40,000</td>
+            </tr>
+            <tr>
+                <td><span class="category">3.12</span></td>
+                <td>Intellectual Property</td>
+                <td>Trademark & Patent (INAPI)</td>
+                <td>Protecting source code and brand identity.</td>
+                <td>1</td>
+                <td>40,000</td>
+                <td class="price">40,000</td>
+            </tr>
+            <tr class="total-row">
+                <td colspan="6" style="text-align: right;">Total Amount:</td>
+                <td style="color: #34d399;">990,000 DZD</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="instruction">💡 Tip: You can select this table, copy it (Ctrl+C), and paste it directly into MS Word or Excel. It will keep all its colors and formatting!</p>
+
+</body>
+</html>

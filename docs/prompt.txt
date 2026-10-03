@@ -1,0 +1,12 @@
+Context Initialization Request:
+Before we proceed with any new modifications, I need you to thoroughly scan and restore your understanding of this entire codebase.
+
+Please perform the following silently or with minimal output:
+1. Scan the project structure, routing architecture (e.g., Next.js pages/app directory), and component hierarchy.
+2. Analyze the database configurations, schemas (e.g., Supabase), and API integrations.
+3. Review the TypeScript types/interfaces to understand the core data models.
+4. Note the UI styling conventions (e.g., Tailwind CSS configurations) and shared layouts.
+
+Output:
+Provide a very brief summary (bullet points) of the core features and the main architecture you just read to confirm you have the full context. 
+Do not generate, refactor, or suggest any new code yet. Await my specific instructions.

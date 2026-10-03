@@ -1,0 +1,13 @@
+N°;Famille;Désignation précise;Justification technique;Qté;P.U. DA;Total DA
+3.09;Cloud & Digital Services;VPS & Cloud Database (Supabase Pro);Platform hosting and real-time attendance sync (TRL 4).;1;150000;150000
+3.09;Cloud & Digital Services;SMS Gateway (100k SMS);Testing instant parent notifications upon entry.;1;100000;100000
+3.09;Cloud & Digital Services;Domain Name & SSL Certificate;Official domain and secure encryption.;1;15000;15000
+3.04;Prototype Equipment;Tablets (Kiosk Mode);Exclusive QR scanning gates at entrances (Not personal).;3;80000;240000
+3.04;Prototype Equipment;Tablet Wall Mounts;Securing tablets at entrances (Realistic simulation).;3;15000;45000
+3.04;Prototype Equipment;PVC Thermal Printers;Distributed to multiple test centers to evaluate workload and scalability.;5;50000;250000
+3.04;Prototype Equipment;Blank PVC Cards (1000 pcs);Raw material to test automated barcode reading.;1;35000;35000
+3.05;Software Development;Mobile Dev Licenses (Apple & Google);Publishing the app for internal testers.;1;30000;30000
+3.05;Software Development;Premium UI/UX Library License;Ready-made components to accelerate UI development.;1;45000;45000
+3.05;Software Development;AI Coding Agents Subscriptions;Essential to accelerate complex coding and debugging.;1;40000;40000
+3.12;Intellectual Property;Trademark & Patent (INAPI);Protecting source code and brand identity.;1;40000;40000
+;;;Total;;;990000

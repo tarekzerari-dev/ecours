@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+/* Dark mode variant for Tailwind v4 */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+
+
+@theme {
+  /* =========================================
+     1. الألوان الهوية الخضراء (Educational Emerald & Sage)
+     ========================================= */
+  --color-emerald-50: #ecfdf5;
+  --color-emerald-100: #d1fae5;
+  --color-emerald-200: #a7f3d0;
+  --color-emerald-300: #6ee7b7;
+  --color-emerald-400: #34d399;
+  --color-emerald-500: #10b981;
+  --color-emerald-600: #059669;
+  --color-emerald-700: #047857;
+  --color-emerald-800: #065f46;
+  --color-emerald-900: #064e3b;
+  --color-emerald-950: #022c22;
+
+  /* =========================================
+     2. الخطوط (Typography)
+     ========================================= */
+  --font-sans: var(--font-cairo), 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  
+  /* Fluid Typography using clamp for silky smooth scaling */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+  --text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.3rem + 1vw, 1.875rem);
+  --text-3xl: clamp(1.875rem, 1.6rem + 1.375vw, 2.25rem);
+
+  /* =========================================
+     3. الظلال العضوية (Organic Natural Elevations)
+     ========================================= */
+  --shadow-float: 0 10px 30px -10px rgba(6, 78, 59, 0.08), 0 4px 12px -4px rgba(2, 44, 34, 0.04);
+  --shadow-float-hover: 0 16px 40px -10px rgba(5, 150, 105, 0.16), 0 8px 16px -6px rgba(4, 120, 87, 0.08);
+  --shadow-glow: 0 0 18px rgba(16, 185, 129, 0.22);
+
+  /* =========================================
+     4. الرسوم المتحركة (Animations)
+     ========================================= */
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
+  --animate-fade-in: fadeIn 1s ease-out forwards;
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
+
+/* =========================================
+   الطبقات الأساسية (Base & Utilities)
+   ========================================= */
+@layer base {
+  html, body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased selection:bg-emerald-600 selection:text-white;
+    direction: rtl;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Dark mode base */
+  [data-theme="dark"] body,
+  [data-theme="dark"] {
+    @apply bg-slate-950 text-slate-100;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { @apply bg-slate-300 rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-slate-400; }
+  [data-theme="dark"] ::-webkit-scrollbar-thumb { @apply bg-slate-600; }
+  [data-theme="dark"] ::-webkit-scrollbar-thumb:hover { @apply bg-slate-500; }
+  aside ::-webkit-scrollbar-thumb { @apply bg-slate-700; }
+  aside ::-webkit-scrollbar-thumb:hover { @apply bg-slate-600; }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-xl border border-emerald-100/60 shadow-float;
+    @apply dark:bg-slate-800/80 dark:border-slate-700/60;
+  }
+  
+  .glass-header {
+    @apply bg-white/85 backdrop-blur-md border-b border-slate-200/60 supports-[backdrop-filter]:bg-white/70;
+    @apply dark:bg-slate-900/85 dark:border-slate-700/60 dark:supports-[backdrop-filter]:bg-slate-900/70;
+  }
+
+  .interactive-element {
+    @apply transition-all duration-300 ease-out hover:-translate-y-0.5 active:scale-95 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2;
+  }
+
+  /* Dark mode card utility */
+  .card {
+    @apply bg-white border border-slate-200;
+    @apply dark:bg-slate-800 dark:border-slate-700;
+  }
+
+  .card-glass {
+    @apply bg-white/90 backdrop-blur-md border border-slate-200/80;
+    @apply dark:bg-slate-800/90 dark:border-slate-700/60;
+  }
+}
+

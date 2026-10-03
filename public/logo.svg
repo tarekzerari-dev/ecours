@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="svgRibbonMain" x1="100" y1="100" x2="500" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#15803D" />
+      <stop offset="40%" stop-color="#16A34A" />
+      <stop offset="75%" stop-color="#22C55E" />
+      <stop offset="100%" stop-color="#4ADE80" />
+    </linearGradient>
+
+    <linearGradient id="svgRibbonDark" x1="150" y1="180" x2="400" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#052E16" />
+      <stop offset="50%" stop-color="#065F46" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+
+    <linearGradient id="svgRibbonHighlight" x1="200" y1="50" x2="450" y2="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#86EFAC" />
+      <stop offset="50%" stop-color="#22C55E" />
+      <stop offset="100%" stop-color="#15803D" />
+    </linearGradient>
+
+    <linearGradient id="svgCapGrad" x1="100" y1="30" x2="350" y2="170" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#166534" />
+      <stop offset="50%" stop-color="#15803D" />
+      <stop offset="100%" stop-color="#22C55E" />
+    </linearGradient>
+
+    <linearGradient id="svgPenNib" x1="330" y1="260" x2="450" y2="390" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#15803D" />
+      <stop offset="50%" stop-color="#16A34A" />
+      <stop offset="100%" stop-color="#22C55E" />
+    </linearGradient>
+  </defs>
+
+  <!-- EMBLEM GROUP (CENTERED TOP) -->
+  <g id="emblem-group" transform="translate(150, 20)">
+    <!-- Graduation Cap -->
+    <g id="cap">
+      <polygon points="120,135 290,60 410,115 240,190" fill="url(#svgCapGrad)" stroke="#86EFAC" stroke-width="2.5" stroke-opacity="0.6" />
+      <path d="M 175 160 Q 240 195 320 155 L 320 185 Q 240 225 175 190 Z" fill="#065F46" opacity="0.9" />
+      <path d="M 170 138 Q 160 180 155 210" stroke="#22C55E" stroke-width="4" stroke-linecap="round" />
+      <circle cx="155" cy="216" r="6" fill="#86EFAC" />
+      <path d="M 152 222 L 148 245 M 155 222 L 155 248 M 158 222 L 162 245" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" />
+    </g>
+
+    <!-- Swirling Ribbon "e" -->
+    <g id="ribbon-e">
+      <path d="M 230 190 Q 370 110 400 230 Q 420 330 310 400 Q 200 440 150 360 Q 110 300 160 210 Q 210 120 330 140 C 370 148 390 165 400 185" fill="none" stroke="url(#svgRibbonDark)" stroke-width="48" stroke-linecap="round" />
+      <path d="M 230 190 Q 370 110 400 230 Q 420 330 310 400 Q 200 440 150 360 Q 110 300 160 210 Q 210 120 330 140" fill="none" stroke="url(#svgRibbonMain)" stroke-width="38" stroke-linecap="round" />
+      <path d="M 160 210 Q 210 120 330 140 C 380 148 400 180 380 220 C 350 270 230 250 170 290" fill="none" stroke="url(#svgRibbonHighlight)" stroke-width="28" stroke-linecap="round" />
+      <path d="M 200 395 C 270 425 350 390 400 340" fill="none" stroke="url(#svgRibbonMain)" stroke-width="34" stroke-linecap="round" />
+    </g>
+
+    <!-- Minimal Teacher Line Art (Upper Right Inside ribbon loop) -->
+    <g id="teacher-outline" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+      <rect x="330" y="170" width="85" height="65" rx="8" fill="#F0FDF4" fill-opacity="0.8" stroke="#22C55E" stroke-width="2.5" />
+      <circle cx="372" cy="192" r="10" stroke="#15803D" />
+      <path d="M 364 191 H 380" stroke="#15803D" stroke-width="2" />
+      <path d="M 354 220 Q 372 206 390 220" stroke="#15803D" />
+      <line x1="388" y1="205" x2="410" y2="182" stroke="#16A34A" stroke-width="2.5" />
+    </g>
+
+    <!-- Fountain Pen Nib -->
+    <g id="pen-nib" transform="translate(355, 290) rotate(15)">
+      <path d="M 10 30 L 60 0 L 85 45 L 30 75 Z" fill="url(#svgPenNib)" stroke="#15803D" stroke-width="3" stroke-linejoin="round" />
+      <path d="M 22 28 L 56 8 L 72 38 L 36 58 Z" fill="#86EFAC" opacity="0.6" />
+      <circle cx="46" cy="36" r="4.5" fill="#047857" />
+      <line x1="46" y1="36" x2="60" y2="0" stroke="#047857" stroke-width="2.5" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <!-- WORDMARK: eCours -->
+  <g id="wordmark" transform="translate(400, 480)" text-anchor="middle">
+    <text font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="64" letter-spacing="-1">
+      <tspan fill="#16A34A" font-style="italic" font-size="72">e</tspan><tspan fill="#0F172A">Cours</tspan>
+    </text>
+  </g>
+
+  <!-- DIVIDER LINE WITH CENTER ACCENT DOT -->
+  <g id="divider">
+    <line x1="250" y1="515" x2="385" y2="515" stroke="#CBD5E1" stroke-width="1.5" stroke-linecap="round" />
+    <circle cx="400" cy="515" r="4" fill="#16A34A" />
+    <line x1="415" y1="515" x2="550" y2="515" stroke="#CBD5E1" stroke-width="1.5" stroke-linecap="round" />
+  </g>
+
+  <!-- ARABIC SLOGAN -->
+  <g id="slogan" transform="translate(400, 555)" text-anchor="middle">
+    <text font-family="Cairo, Arial, sans-serif" font-weight="700" font-size="20" fill="#475569" letter-spacing="0.5">
+      إدارة ذكية • تعليم منظم • مستقبل أفضل
+    </text>
+  </g>
+</svg>

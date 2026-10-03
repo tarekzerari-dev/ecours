@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>ميزانية مشروع eCours</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            padding: 40px;
+            color: #0f172a;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #059669; /* Emerald 600 */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th {
+            background-color: #059669; /* Emerald 600 */
+            color: white;
+            padding: 16px;
+            text-align: right;
+            font-weight: 600;
+        }
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:hover {
+            background-color: #ecfdf5; /* Emerald 50 */
+        }
+        .category {
+            background-color: #d1fae5; /* Emerald 100 */
+            color: #047857; /* Emerald 700 */
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        .total-row td {
+            background-color: #1e293b; /* Slate 800 */
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .price {
+            font-weight: bold;
+            color: #0f172a;
+        }
+        .instruction {
+            text-align: center;
+            color: #64748b;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>💰 ميزانية واحتياجات مشروع eCours (ProtoMarket)</h1>
+        <p>النسخة المنظمة والملونة (TRL 4)</p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>N°</th>
+                <th>عائلة الشراء</th>
+                <th>التسمية الدقيقة</th>
+                <th>التبرير التقني</th>
+                <th>الكمية</th>
+                <th>سعر الوحدة</th>
+                <th>المجموع (دج)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="category">3.09</span></td>
+                <td>الخدمات السحابية والرقمية</td>
+                <td>إشتراك سنوي بخادم VPS وقاعدة بيانات</td>
+                <td>استضافة المنصة ومزامنة الحضور والغياب (TRL 4).</td>
+                <td>1</td>
+                <td>150,000</td>
+                <td class="price">150,000</td>
+            </tr>
+            <tr>
+                <td><span class="category">3.09</span></td>
+                <td>الخدمات السحابية والرقمية</td>
+                <td>باقة رسائل نصية (SMS Gateway - 100k)</td>
+                <td>اختبار إشعارات الأولياء عند الدخول.</td>
+                <td>1</td>
+                <td>100,000</td>
+                <td class="price">100,000</td>
+            </tr>
+            <tr>
+                <td><span class="category">3.09</span></td>
+                <td>الخدمات السحابية والرقمية</td>
+                <td>نطاق رسمي وشهادة SSL</td>
+                <td>نطاق رسمي وتشفير آمن للمنصة.</td>
+                <td>1</td>
+                <td>15,000</td>
+                <td class="price">15,000</td>
+            </tr>
+            <tr>
+                <td><span class="category">3.04</span></td>
+                <td>معدات النموذج الأولي</td>
+                <td>أجهزة لوحية (Tablets) مخصصة بنظام Kiosk</td>
+                <td>بوابات مسح QR حصرية في المداخل (غير شخصية).</td>
+                <td>3</td>
+                <td>80,000</td>
+                <td class="price">240,000</td>
+            </tr>
+            <tr>
+                <td><span class="category">3.04</span></td>
+                <td>معدات النموذج الأولي</td>
+                <td>حوامل أمان حائطية للأجهزة اللوحية</td>
+                <td>تثبيت وحماية الأجهزة في المداخل (محاكاة واقعية).</td>
+                <td>3</td>
+                <td>15,000</td>
+                <td class="price">45,000</td>
+            </tr>
+            <tr>
+                <td><span class="category">3.04</span></td>
+                <td>معدات النموذج الأولي</td>
+                <td>طابعات بطاقات بلاستيكية (PVC Thermal)</td>
+                <td>توزيعها على عدة مراكز تجريبية لاختبار ضغط العمل.</td>
+                <td>5</td>
+                <td>50,000</td>
+                <td class="price">250,000</td>
+            </tr>
+            <tr>
+                <td><span class="category">3.04</span></td>
+                <td>معدات النموذج الأولي</td>
+                <td>حزمة بطاقات PVC خام (1000 بطاقة)</td>
+                <td>مادة أولية لاختبار القراءة الآلية.</td>
+                <td>1</td>
+                <td>35,000</td>
+                <td class="price">35,000</td>
+            </tr>
+            <tr>
+                <td><span class="category">3.05</span></td>
+                <td>تطوير البرمجيات</td>
+                <td>تراخيص مطوري تطبيقات الهواتف</td>
+                <td>نشر التطبيق للمختبرين الداخليين.</td>
+                <td>1</td>
+                <td>30,000</td>
+                <td class="price">30,000</td>
+            </tr>
+            <tr>
+                <td><span class="category">3.05</span></td>
+                <td>تطوير البرمجيات</td>
+                <td>ترخيص مكتبة واجهات (UI/UX Library)</td>
+                <td>مكونات جاهزة لتسريع بناء الواجهات.</td>
+                <td>1</td>
+                <td>45,000</td>
+                <td class="price">45,000</td>
+            </tr>
+            <tr>
+                <td><span class="category">3.05</span></td>
+                <td>تطوير البرمجيات</td>
+                <td>اشتراكات الذكاء الاصطناعي (AI Agents)</td>
+                <td>تسريع كتابة الأكواد المعقدة وتصحيح الأخطاء.</td>
+                <td>1</td>
+                <td>40,000</td>
+                <td class="price">40,000</td>
+            </tr>
+            <tr>
+                <td><span class="category">3.12</span></td>
+                <td>الملكية الفكرية</td>
+                <td>رسوم براءة الاختراع والعلامة التجارية</td>
+                <td>حماية الكود المصدري والعلامة التجارية.</td>
+                <td>1</td>
+                <td>40,000</td>
+                <td class="price">40,000</td>
+            </tr>
+            <tr class="total-row">
+                <td colspan="6" style="text-align: left;">المجموع الكلي المتبقي:</td>
+                <td style="color: #34d399;">990,000 دج</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="instruction">💡 تلميح: يمكنك تحديد هذا الجدول بالماوس، نسخه (Ctrl+C)، ولصقه مباشرة في برنامج Word أو Excel وسيحافظ على ألوانه وتنسيقه!</p>
+
+</body>
+</html>
