@@ -22,9 +22,19 @@
   --color-emerald-950: #022c22;
 
   /* =========================================
-     2. الخطوط (Typography)
+     2. منظومة الخطوط الطباعية المتطورة (Typography System)
      ========================================= */
-  --font-sans: var(--font-cairo), 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* نصوص المحتوى والقراءة (Body & UI): Readex Pro للعربية + DM Sans للاتينية */
+  --font-sans: var(--font-readex), var(--font-dm-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* العناوين والترويسات (Headings): Kufam للعربية الجريئة + Space Grotesk للاتينية العصرية */
+  --font-heading: var(--font-kufam), var(--font-space), ui-sans-serif, system-ui, sans-serif;
+  
+  /* الشخصية والهوية المتميزة (Signature Accent): Beiruti للعربية الأصيلة */
+  --font-accent: var(--font-beiruti), var(--font-readex), ui-sans-serif, sans-serif;
+
+  /* علامة المشروع والرموز التقنية (Brand Wordmark): Space Grotesk */
+  --font-brand: var(--font-space), var(--font-kufam), ui-sans-serif, sans-serif;
   
   /* Fluid Typography using clamp for silky smooth scaling */
   --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
@@ -84,6 +94,11 @@
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
+  /* Headings use Kufam (Arabic) + Space Grotesk (Latin) */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+
   /* Dark mode base */
   [data-theme="dark"] body,
   [data-theme="dark"] {
@@ -102,6 +117,39 @@
 }
 
 @layer utilities {
+  /* Typography utility classes */
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  
+  .font-accent {
+    font-family: var(--font-accent);
+  }
+
+  .font-brand {
+    font-family: var(--font-brand);
+  }
+
+  .font-beiruti {
+    font-family: var(--font-beiruti), var(--font-accent);
+  }
+
+  .font-kufam {
+    font-family: var(--font-kufam), var(--font-heading);
+  }
+
+  .font-readex {
+    font-family: var(--font-readex), var(--font-sans);
+  }
+
+  .font-space {
+    font-family: var(--font-space), var(--font-brand);
+  }
+
+  .font-dm {
+    font-family: var(--font-dm-sans), var(--font-sans);
+  }
+
   .glass-panel {
     @apply bg-white/80 backdrop-blur-xl border border-emerald-100/60 shadow-float;
     @apply dark:bg-slate-800/80 dark:border-slate-700/60;

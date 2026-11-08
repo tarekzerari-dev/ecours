@@ -65,7 +65,7 @@ export default function AuthLayout({
             </p>
             <div className="hidden md:block absolute bottom-8 left-10">
               <p className="text-white/40 text-xs font-medium tracking-wide">
-                &copy; {new Date().getFullYear()} eCours. {t("landing.footerRights")}
+                &copy; {new Date().getFullYear()} eCours. {t("footerRights")}
               </p>
             </div>
           </div>

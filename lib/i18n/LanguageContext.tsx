@@ -17,9 +17,15 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const savedLang = localStorage.getItem('ecours_lang') as Language;
+    const urlParams = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null;
+    const urlLang = urlParams?.get('lang') as Language | null;
+    const savedLang = (urlLang && ['ar', 'en', 'fr'].includes(urlLang))
+      ? urlLang
+      : (localStorage.getItem('ecours_lang') as Language);
+
     if (savedLang && ['ar', 'en', 'fr'].includes(savedLang)) {
       setLanguageState(savedLang);
+      localStorage.setItem('ecours_lang', savedLang);
       document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
       document.documentElement.lang = savedLang;
     }

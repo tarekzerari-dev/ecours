@@ -243,7 +243,7 @@ export const translations = {
     noResults: "لا توجد نتائج",
     all: "الكل",
     actions: "إجراءات",
-    back: "رجوع",
+    footerRights: "الإدارة الذكية للدروس الخصوصية. جميع الحقوق محفوظة.",
     
     // Profile
     profileTitle: "الملف الشخصي",
@@ -527,7 +527,7 @@ export const translations = {
     noResults: "No results",
     all: "All",
     actions: "Actions",
-    back: "Back",
+    footerRights: "Smart Management for Tutoring. All rights reserved.",
     
     // Profile
     profileTitle: "Profile",
@@ -811,7 +811,7 @@ export const translations = {
     noResults: "Aucun résultat",
     all: "Tous",
     actions: "Actions",
-    back: "Retour",
+    footerRights: "Gestion Intelligente des Cours. Tous droits réservés.",
     
     // Profile
     profileTitle: "Profil",

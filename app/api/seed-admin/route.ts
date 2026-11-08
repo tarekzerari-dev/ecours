@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     const { data: existingUsers } = await supabase.auth.admin.listUsers();
     const userMap = new Map((existingUsers?.users || []).map(u => [u.email, u]));
 
-    const getOrCreateUser = async (email: string, fullName: string, role: 'manager' | 'teacher') => {
+    const getOrCreateUser = async (email: string, fullName: string, role: 'superadmin' | 'manager' | 'teacher') => {
       let user = userMap.get(email);
       if (!user) {
         const { data: newUser, error } = await supabase.auth.admin.createUser({
@@ -39,6 +39,9 @@ export async function POST(req: NextRequest) {
 
       return user;
     };
+
+    // 0. Super Admin (System Administrator)
+    await getOrCreateUser('admin@ecours.com', 'المدير العام للمنصة', 'superadmin');
 
     let totalSchools = 0;
     let totalTeachers = 0;

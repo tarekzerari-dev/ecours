@@ -118,7 +118,7 @@ export default function AddGroupModal({
                 onChange={(e) => setAssignedTeacherId(e.target.value)}
                 className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 outline-none text-slate-900 dark:text-slate-100 text-sm transition-all bg-white dark:bg-slate-900"
               >
-                {teachers.map(t => (
+                {teachers.map((t: any) => (
                   <option key={t.id} value={t.id}>{t.fullName} ({t.subject})</option>
                 ))}
               </select>

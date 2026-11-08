@@ -9,9 +9,9 @@ import {
   MOCK_ADMIN_BILLING,
 } from '@/lib/mock-admin-data';
 
-const withTimeout = <T>(promise: Promise<T>, timeoutMs = 1200): Promise<T> => {
+const withTimeout = async <T = any>(promise: any, timeoutMs = 1200): Promise<T> => {
   return Promise.race([
-    promise,
+    Promise.resolve(promise),
     new Promise<T>((_, reject) => setTimeout(() => reject(new Error("Supabase query timeout")), timeoutMs))
   ]);
 };
@@ -224,7 +224,7 @@ export async function getStudentsAction(groupId: string | undefined, mockRole: s
     
     if (groupId) {
       const { data: sgs } = await withTimeout(supabase.from('student_groups').select('student_id').eq('group_id', groupId), 800);
-      const sids = (sgs || []).map(s => s.student_id);
+      const sids = (sgs || []).map((s: any) => s.student_id);
       if (sids.length > 0) {
         query = query.in('id', sids);
       } else {
@@ -280,7 +280,7 @@ export async function getSessionsAction(groupId: string | undefined, mockRole: s
       if (managerSchoolId) {
         const { data: groups } = await withTimeout(supabase.from('groups').select('id').eq('school_id', managerSchoolId), 800);
         if (groups && groups.length > 0) {
-          query = query.in('group_id', groups.map(g => g.id));
+          query = query.in('group_id', groups.map((g: any) => g.id));
         } else {
           return [];
         }
@@ -290,7 +290,7 @@ export async function getSessionsAction(groupId: string | undefined, mockRole: s
       if (prof) {
         const { data: groups } = await withTimeout(supabase.from('groups').select('id').eq('teacher_id', prof.id), 800);
         if (groups && groups.length > 0) {
-          query = query.in('group_id', groups.map(g => g.id));
+          query = query.in('group_id', groups.map((g: any) => g.id));
         } else {
           return [];
         }
@@ -383,7 +383,7 @@ export async function getPaymentsAction(groupId: string | undefined, mockRole: s
       if (managerSchoolId) {
         const { data: groups } = await withTimeout(supabase.from('groups').select('id').eq('school_id', managerSchoolId), 800);
         if (groups && groups.length > 0) {
-          query = query.in('group_id', groups.map(g => g.id));
+          query = query.in('group_id', groups.map((g: any) => g.id));
         } else {
           return [];
         }
@@ -393,7 +393,7 @@ export async function getPaymentsAction(groupId: string | undefined, mockRole: s
       if (prof) {
         const { data: groups } = await withTimeout(supabase.from('groups').select('id').eq('teacher_id', prof.id), 800);
         if (groups && groups.length > 0) {
-          query = query.in('group_id', groups.map(g => g.id));
+          query = query.in('group_id', groups.map((g: any) => g.id));
         } else {
           return [];
         }

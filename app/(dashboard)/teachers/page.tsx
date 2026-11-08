@@ -77,7 +77,7 @@ export default function TeachersPage() {
       {/* Teachers List */}
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {teachers.length > 0 ? (
-          teachers.map((teacher) => (
+          teachers.map((teacher: any) => (
             <div 
               key={teacher.id} 
               className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
