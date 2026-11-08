@@ -139,16 +139,47 @@ export default function LoginPage() {
         </button>
       </form>
       
-      {process.env.NODE_ENV === 'development' && (
-        <div className="mt-8 p-3 rounded-lg bg-slate-50 border border-slate-100 text-center">
-          <p className="text-[10px] text-slate-400 mb-1 uppercase tracking-wider font-semibold">{t("devOnly")}</p>
-          <div className="flex flex-col gap-1 text-xs font-mono text-slate-500 text-center" dir="ltr">
-            <span>admin@ecours.com</span>
-            <span>manager@ecours.com</span>
-            <span>ahmed@ecours.com</span>
-          </div>
+      {/* Demo Accounts Quick-fill */}
+      <div className="mt-6 p-4 rounded-2xl bg-emerald-50/60 dark:bg-emerald-950/20 border border-emerald-200/60 dark:border-emerald-800/40 text-center">
+        <p className="text-xs font-bold text-emerald-800 dark:text-emerald-300 mb-2">
+          ⚡ حسابات تجريبية سريعة (اضغط للتعبئة):
+        </p>
+        <div className="grid grid-cols-3 gap-2 text-xs">
+          <button
+            type="button"
+            onClick={() => {
+              setEmail("admin@ecours.com");
+              setPassword("DemoPass123!");
+            }}
+            className="py-1.5 px-2 bg-white dark:bg-slate-800 border border-emerald-300 dark:border-emerald-700 rounded-lg text-emerald-700 dark:text-emerald-300 font-semibold hover:bg-emerald-100 dark:hover:bg-slate-700 transition-colors cursor-pointer shadow-xs"
+          >
+            المدير العام
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setEmail("manager_algiers@ecours.demo");
+              setPassword("DemoPass123!");
+            }}
+            className="py-1.5 px-2 bg-white dark:bg-slate-800 border border-emerald-300 dark:border-emerald-700 rounded-lg text-emerald-700 dark:text-emerald-300 font-semibold hover:bg-emerald-100 dark:hover:bg-slate-700 transition-colors cursor-pointer shadow-xs"
+          >
+            مدير مدرسة
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setEmail("teacher_mourad@ecours.demo");
+              setPassword("DemoPass123!");
+            }}
+            className="py-1.5 px-2 bg-white dark:bg-slate-800 border border-emerald-300 dark:border-emerald-700 rounded-lg text-emerald-700 dark:text-emerald-300 font-semibold hover:bg-emerald-100 dark:hover:bg-slate-700 transition-colors cursor-pointer shadow-xs"
+          >
+            أستاذ
+          </button>
         </div>
-      )}
+        <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-2">
+          كلمة المرور: <span className="font-mono font-bold text-emerald-700 dark:text-emerald-400">DemoPass123!</span>
+        </p>
+      </div>
 
       {/* Subscribe Button */}
       <div className="mt-8 pt-6 border-t border-slate-100 text-center">

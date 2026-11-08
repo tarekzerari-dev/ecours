@@ -40,7 +40,9 @@ export async function updateSession(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const isSuperAdmin = user?.email === process.env.ADMIN_EMAIL;
+  const isSuperAdmin =
+    user?.user_metadata?.role === 'superadmin' ||
+    user?.email === (process.env.ADMIN_EMAIL || 'admin@ecours.com');
 
   // Auth pages (login, register) — redirect to dashboard/admin if already authenticated
   if (
@@ -61,12 +63,18 @@ export async function updateSession(request: NextRequest) {
   }
 
   // Protected routes — redirect to login if not authenticated
-  if (
-    !user &&
-    !request.nextUrl.pathname.startsWith("/login") &&
-    !request.nextUrl.pathname.startsWith("/register") &&
-    !request.nextUrl.pathname.startsWith("/auth")
-  ) {
+  const isProtectedRoute =
+    request.nextUrl.pathname.startsWith("/dashboard") ||
+    request.nextUrl.pathname.startsWith("/admin") ||
+    request.nextUrl.pathname.startsWith("/groups") ||
+    request.nextUrl.pathname.startsWith("/students") ||
+    request.nextUrl.pathname.startsWith("/teachers") ||
+    request.nextUrl.pathname.startsWith("/attendance") ||
+    request.nextUrl.pathname.startsWith("/finances") ||
+    request.nextUrl.pathname.startsWith("/notifications") ||
+    request.nextUrl.pathname.startsWith("/profile");
+
+  if (!user && isProtectedRoute) {
     const url = request.nextUrl.clone();
     url.pathname = "/login";
     return NextResponse.redirect(url);

@@ -5,6 +5,10 @@ import { createClient } from '@supabase/supabase-js';
 // 1. Schools & Managers
 // 2. Affiliated Teachers (with groups, students, sessions, payments under schools)
 // 3. Independent Teachers (with groups, students, sessions, payments, independent_teacher_id)
+export async function GET(req: NextRequest) {
+  return POST(req);
+}
+
 export async function POST(req: NextRequest) {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
   const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
